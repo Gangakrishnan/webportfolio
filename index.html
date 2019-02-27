@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+  <body>
+    <div class="background">
+    <div class="nav">
+      <a class="a active" href="#">HOME</a>
+      <a class="b" href="#">ABOUT</a>
+      <a class="c" href="#">SKILLS</a>
+      <a class="d" href="#">CONTACT</a>
+    </div>
+    <div class="content">
+      <div class="home">
+        <h1>Me!!! GANGA KRISHNAN</h1>
+        <h2>(WEB DESIGNER)</h2>
+      </div>
+    <div class="about">
+      <p><b>Hello Friends!!!</b><br>I'm Ganga Krishnan,a web designer.<br>
+       This portfolio represents a few of the things about my work.<br>
+        I'm proficient in web designing and development.<br>
+         Currently,I'm working on it.</P>
+    </div>
+    <div class="skills">
+      <div class="image">
+        <img src="./images/pp.jpg"  />
+      </div>
+    </div>
+    <div class="contact">
+      <div class="box">
+        <form action="" method="post">
+          <input type="text" name="" class="inputtext" value="Name:">
+          <input type="text" name="" class="inputtext" value="Email:">
+          <textarea cols="4" rows="6" class="inputmessage">Your Message...!!!</textarea>
+          <input type="button" name="" class="submitbutton" value="submit">
+        </form>
+      </div>
+    </div>
+ </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("a").click(function(){
+        var selected = $(this);
+        $("a").removeClass("active");
+        $(selected).addClass("active");
+      });
+
+        var $a = $('.a');
+         $b = $('.b');
+         $c = $('.c');
+         $d = $('.d');
+        $home=$('.home');
+        $about=$('.about');
+        $skills=$('.skills');
+        $contact=$('.contact');
+
+        $a.click(function(){
+          $home.fadeIn();
+          $about.fadeOut();
+          $skills.fadeOut();
+          $contact.fadeOut();
+        });
+
+        $b.click(function(){
+          $about.fadeIn();
+          $home.fadeOut();
+          $skills.fadeOut();
+          $contact.fadeOut();
+        });
+
+        $c.click(function(){
+          $skills.fadeIn();
+          $about.fadeOut();
+          $home.fadeOut();
+          $contact.fadeOut();
+        });
+
+        $d.click(function(){
+          $contact.fadeIn();
+          $about.fadeOut();
+          $skills.fadeOut();
+          $home.fadeOut();
+        });
+    });
+
+  </script>
+</body>
+</html>
